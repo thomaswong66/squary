@@ -1,0 +1,482 @@
+html, body, #app, #app>div, .full-height, #root {
+  height: 100%
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+button {
+  border: 0;
+  font-weight: 500;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#form-container {
+  position: relative;
+  width: 380px;
+  margin: 0 auto;
+  top: 50%;
+}
+
+.third {
+  float: left;
+  width: calc((100% - 32px) / 3);
+  padding: 0;
+  margin: 0 16px 16px 0;
+}
+
+.third:last-of-type {
+  margin-right: 0;
+}
+
+/* Define how SqPaymentForm iframes should look */
+.sq-input {
+  height: 56px;
+  box-sizing: border-box;
+  border: 1px solid #E0E2E3;
+  background-color: white;
+  border-radius: 6px;
+  display: inline-block;
+  -webkit-transition: border-color .2s ease-in-out;
+  -moz-transition: border-color .2s ease-in-out;
+  -ms-transition: border-color .2s ease-in-out;
+  transition: border-color .2s ease-in-out;
+}
+
+/* Define how SqPaymentForm iframes should look when they have focus */
+.sq-input--focus {
+  border: 1px solid #4A90E2;
+}
+
+/* Define how SqPaymentForm iframes should look when they contain invalid values */
+.sq-input--error {
+  border: 1px solid #E02F2F;
+}
+
+#sq-card-number {
+  margin-bottom: 16px;
+}
+
+/* Customize the "Pay with Credit Card" button */
+.button-credit-card {
+  width: 100%;
+  height: 56px;
+  margin-top: 10px;
+  background: #4A90E2;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  -webkit-transition: background .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out;
+  -ms-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+
+.button-credit-card:hover {
+  background-color: #4281CB;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.menuPanel {
+  width: auto;
+}
+
+.menuItemPanel {
+  border-radius: 25px !important;
+  margin-bottom: 5px;
+}
+
+.menuButton {
+  background-color: #FFEA21 !important;
+  -webkit-box-shadow: inset 0px 2px 3px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0px 2px 3px 2px rgba(0,0,0,0.25);
+  box-shadow: inset 0px 2px 3px 2px rgba(0,0,0,0.25);
+}
+
+.menuHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top:0;
+  width:100%;
+  background-color: #FFE920 !important;
+  height: 80px;
+}
+
+.menuHeaderButtons{
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+.menuHeaderButtons > div{
+  margin-left: 20px;
+}
+
+.menuHeaderButton{
+  height: 50px;
+  width: auto;
+  -moz-border-radius: 30px !important; 
+  -webkit-border-radius: 30px  !important;
+  border-radius: 30px  !important;
+  padding: 20px;
+}
+
+.menuHeaderButton > Icon{
+  height: auto;
+  width: auto;
+  padding: 20px;
+}
+
+.menuHeaderTitle{
+  padding-left: 5%;
+}
+
+.rs-modal-sm {
+  width:100% !important;
+  bottom: 0 !important;
+  position: fixed !important;
+}
+.rs-modal-content {
+  border-top-left-radius: 25px !important;
+  border-top-right-radius: 25px !important;
+  padding: 10% !important;
+  box-shadow: 0px -8px 20px 0px !important;
+}
+
+/* CART */
+
+.cartButton {
+  width: 50px !important;
+  height: 50px !important;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: black !important;
+  background-color: black;
+}
+
+.cartButtonSection{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background-color: #FFE920 !important;
+  height: 60px;
+}
+
+.cartButtonSection > span {
+  margin-left: 20px;
+}
+
+.cartCount{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.cartIconButton{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.cartIconButton::before{
+  vertical-align: middle;
+}
+
+
+.cartButtonSectionME{
+  width: 100%;
+  height: 50px;
+  background-color: #FFE920 !important;
+}
+
+.cartIcon{
+  z-index: 0;
+}
+
+.cartButtonSectionDIV{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.cartButtonInsideME{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkOutButton{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 60px;
+}
+
+
+.checkOutButton > button{
+  background-color: #FFE920 !important;
+  width: 100%;
+  height: 100%;
+  color: black;
+  font-size: 16px;
+}
+
+.cartCount{
+  width: auto;
+  height: auto;
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 10px;
+  left: 30px;
+  z-index: 1;
+  background-color: white;
+  -moz-border-radius: 10px; 
+  -webkit-border-radius: 10px; 
+  border-radius: 10px;
+  font-weight: 1000;
+}
+
+.cartItemPanel > .rs-panel-body{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.numberInput > .rs-input{
+  width: 50px !important;
+  margin-right: 20px;
+}
+
+.cartOrder{
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.cartOrder > h6 {
+  font-size: 18px;
+  line-height: 36px;
+}
+.cartOrder > p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.buttonUpdateValue{
+ margin-top: 10px; 
+}
+
+.orderTotals{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.orderTotalsTOtal{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin-top: 20px;
+  background-color: rgba(0,0,0,0.05);
+  font-size: 16px;
+}
+
+.orderTotal{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: auto;
+}
+
+.totalNum{
+  max-width: 1000px;
+  min-width: 100px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.bottomSelfCart{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spacing{
+  height: 10px;
+}
+.bottomSelfCart > .rs-btn-primary{
+  align-self: flex-end !important;
+}
+.confirmation{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.confirmation > Input{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.orderOwner{
+  font-size: 24px;
+  margin-bottom: 100px;;
+}
+
+.orderHost{
+  font-size: 18px;
+  line-height: 40px;;
+}
+/* VIRTUAL LINE */
+
+.othersCartSection {
+  display: flex;
+  flex-direction: column;
+  width: 86%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.virtualLineFormContent {
+  margin-top:5%;
+}
+
+.shareWithPanel{
+  margin-top: 20px;
+}
+
+.addToOrderTitle{
+  font-size: 23px !important;
+
+}
+
+.addToOrderbutton{
+  margin-top: 15px;
+  background-color: #FFE920 !important;
+  color: black !important;
+  font-size: 16px !important;
+}
+
+.noItemsInCart{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  background-color: #F15C5C;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.noItemsInCart:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #D84F4F;
+}
+
+.noItemsInCart > span{
+  width: 100%;
+  height: 50px;
+}
+ 
+/* ADMIN PAGE */
+
+.adminContent {
+  padding: 5%;
+}
+
+.adminList {
+  margin-top: 5%;
+}
+
+.adminItem {
+  margin-bottom: 5%;
+}
+
+.yellowButton {
+  margin-left: 5%;
+  background-color: #ffea21 !important;
+}
